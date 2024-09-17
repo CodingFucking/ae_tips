@@ -115,3 +115,17 @@
 </p>
 
 [#15 Парсинг Таблицы Менделеева](https://github.com/CodingFucking/ae_tips.github.io/blob/main/aetips/%2315%20%D0%9F%D0%B0%D1%80%D1%81%D0%B8%D0%BD%D0%B3%20%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D1%8B%20%D0%9C%D0%B5%D0%BD%D0%B4%D0%B5%D0%BB%D0%B5%D0%B5%D0%B2%D0%B0.md)
+
+****
+<p align="left">
+  <img src="https://github.com/CodingFucking/ae_tips/blob/main/src/16-thumb.png" width="500">
+</p>
+
+[#16 Интервальные значения](https://github.com/CodingFucking/ae_tips/blob/main/aetips/%2316%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B2%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F.md)
+
+****
+<p align="left">
+  <img src="https://github.com/CodingFucking/ae_tips/blob/main/src/17-distr.gif" width="500">
+</p>
+
+[#17 Распределение слоёв](https://github.com/CodingFucking/ae_tips/blob/main/aetips/%2317%20%D0%A0%D0%B0%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5%20%D1%81%D0%BB%D0%BE%D0%B5%CC%88%D0%B2.md)
