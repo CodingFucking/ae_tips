@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtensionManifest
+	Version="4.0"
+	ExtensionBundleId="com.texteditor.palette"
+	ExtensionBundleVersion="1.0.0"
+	ExtensionBundleName="Text Editor [SHORTS]"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<ExtensionList>
+		<Extension Id="com.texteditor.panel" Version="1.0" />
+	</ExtensionList>
+
+	<ExecutionEnvironment>
+		<HostList>
+			<Host Name="AEFT" Version="13.0" />
+		</HostList>
+
+	<LocaleList>
+		<Locale Code="All" />
+	</LocaleList>
+
+	<RequiredRuntimeList>
+		<RequiredRuntime Name="CSXS" Version="4.0" />
+	</RequiredRuntimeList>
+</ExecutionEnvironment>
+
+	<DispatchInfoList>
+		<Extension Id="com.texteditor.panel">
+			<DispatchInfo>
+
+			<Resources>
+				<MainPath>./index.html</MainPath>
+				<ScriptPath>./jsx/aftereffects.jsx</ScriptPath>
+			</Resources>
+
+			<Lifecycle>
+				<AutoVisible>true</AutoVisible>
+			</Lifecycle>
+
+			<UI>
+			    <Type>Panel</Type>
+			    <Menu>Text Editor [SHORTS]</Menu>
+
+			    <Geometry>
+			        <Size>
+			            <Height>100%</Height> <!-- Высота будет подстраиваться под окно -->
+			            <Width>200</Width>    <!-- Ширина фиксирована на 200 пикселей -->
+			        </Size>
+			        <MinSize>
+			            <Height>200</Height>  <!-- Минимальная высота -->
+			            <Width>200</Width>    <!-- Минимальная ширина -->
+			        </MinSize>
+			        <MaxSize>
+			            <Height>10000</Height> <!-- Максимальная высота (можно задать большое значение) -->
+			            <Width>200</Width>    <!-- Максимальная ширина фиксирована на 200 пикселей -->
+			        </MaxSize>
+			    </Geometry>
+			</UI>
+		</DispatchInfo>
+	</Extension>
+</DispatchInfoList>
+</ExtensionManifest>

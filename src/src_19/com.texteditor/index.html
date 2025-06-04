@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor Panel</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Кнопка очистки сверху -->
+        <div class="top-controls">
+            <button id="clearButton" class="small-button">Clear</button>
+        </div>
+
+        <!-- Контейнер для текстового поля -->
+        <div class="text-container">
+            <!-- Текстовое поле -->
+            <div id="textInput" contenteditable="true" placeholder="Введите текст" spellcheck="false"></div>
+        </div>
+
+        <!-- Кнопки снизу: форматировать и вставить текст -->
+        <div class="bottom-controls">
+            <button id="formatButton">Форматировать</button>
+            <button id="insertOrCreateButton">Вставить текст</button>
+        </div>
+        <!-- Модальное окно для уведомлений -->
+        <div id="customAlert" class="custom-alert">
+            <div class="custom-alert-content">
+                <p id="customAlertMessage"></p>
+                <button id="customAlertClose">OK</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/CSInterface.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/formatText.js"></script>
+</body>
+</html>

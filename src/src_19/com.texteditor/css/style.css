@@ -1,0 +1,220 @@
+@font-face {
+    font-family: 'Proxima Nova Extrabold';
+    src: url('../fonts/ProximaNova-Extrabld.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Основные стили для body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2d2d2d;
+    color: #ffffff;
+    padding: 10px;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden; /* Запрещаем изменение размера окна */
+}
+
+/* Контейнер для элементов */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 276.7px; /* Фиксированная ширина */
+    margin: 0 auto; /* Центрируем контейнер */
+}
+
+/* Кнопки сверху */
+.top-controls {
+    display: flex;
+    justify-content: flex-end; /* Кнопка очистки справа */
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    background-color: #2d2d2d;
+    border-bottom: none; /* Убираем границу снизу */
+}
+
+/* Кнопка очистки */
+#clearButton {
+    padding: 8px 12px;
+    background-color: #555;
+    color: #ccc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.5s ease, transform 0.3s ease, box-shadow 0.5s ease;
+    outline: none; /* Убираем контур при фокусе */
+}
+
+/* Контейнер для текстового поля */
+.text-container {
+    width: 100%;
+    height: calc(100% - 120px); /* Высота с учётом кнопок */
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #3d3d3d;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden; /* Скрываем скроллбар */
+}
+
+/* Текстовое поле */
+#textInput {
+    width: 100%;
+    height: 100%;
+    padding: 8px; /* Отступы */
+    background-color: transparent;
+    color: #ffffff;
+    font-family: 'Proxima Nova Extrabold', Arial, sans-serif;
+    font-size: 30px; /* Размер шрифта по умолчанию */
+    white-space: pre-wrap; /* Сохраняем переносы строк */
+    outline: none;
+    border: none; /* Убираем границу */
+    resize: none; /* Запрещаем изменение размера */
+    box-sizing: border-box;
+    overflow-y: scroll; /* Включаем прокрутку */
+}
+
+/* Скрываем скроллбар в текстовом поле */
+#textInput::-webkit-scrollbar {
+    display: none; /* Скрываем скроллбар в Chrome, Safari и Edge */
+}
+
+#textInput {
+    scrollbar-width: none; /* Скрываем скроллбар в Firefox */
+    -ms-overflow-style: none; /* Скрываем скроллбар в IE и Edge */
+}
+
+/* Плейсхолдер для contenteditable */
+#textInput:empty::before {
+    content: attr(placeholder);
+    color: #888;
+    pointer-events: none;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    font-family: 'Proxima Nova Extrabold', Arial, sans-serif;
+    font-size: 30px;
+    line-height: 1.5;
+}
+
+/* Кнопки снизу */
+.bottom-controls {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 0;
+    background-color: #2d2d2d;
+    position: sticky; /* Фиксируем кнопки внизу */
+    bottom: 0;
+    z-index: 1;
+    border-top: none; /* Убираем границу сверху */
+}
+
+/* Стили для кнопок */
+button {
+    flex: 1;
+    padding: 8px 12px;
+    background-color: #555;
+    color: #ccc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.5s ease, transform 0.3s ease, box-shadow 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    outline: none; /* Убираем контур при фокусе */
+}
+
+/* Эффект при наведении на кнопку */
+button:hover {
+    background-color: #666;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+}
+
+/* Эффект при нажатии на кнопку */
+button:active {
+    transform: scale(0.95); /* Уменьшаем размер кнопки */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Тень при нажатии */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Уменьшаем длительность для нажатия */
+}
+
+/* Убираем стандартное выделение при фокусе */
+button:focus {
+    outline: none; /* Убираем контур */
+    box-shadow: 0 0 0 2px rgba(0, 191, 255, 0.5); /* Мягкая тень вместо контура */
+    transition: box-shadow 0.5s ease; /* Плавное появление тени */
+}
+
+/* Стиль для выделенного текста */
+.highlight {
+    color: #00bfff;
+    background-color: transparent;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+/* Стили для кастомного модального окна */
+.custom-alert {
+    display: none; /* Скрываем по умолчанию */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Убедимся, что окно поверх всех элементов */
+}
+
+.custom-alert-content {
+    background-color: #3d3d3d;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 250px; /* Уменьшаем ширину окна */
+    width: 100%;
+}
+
+.custom-alert-content p {
+    margin: 0 0 20px 0;
+    font-size: 14px; /* Уменьшаем размер шрифта */
+    color: #ffffff;
+    line-height: 1.5; /* Улучшаем читаемость */
+}
+
+.custom-alert-content button {
+    padding: 8px 16px;
+    background-color: #555;
+    color: #ccc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-alert-content button:hover {
+    background-color: #666;
+    color: #fff;
+}
